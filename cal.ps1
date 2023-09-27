@@ -6,11 +6,11 @@ function Get-DaysInMonth {
   )
   # check is data correct
   if ($Month -lt 1 -or $Month -gt 12) {
-    Write-Error "Неверный номер месяца: $Month"
+    Write-Error "Incorrect month number: $Month"
     return
   }
   if ($Year -lt 1) {
-    Write-Error "Неверный номер года: $Year"
+    Write-Error "Incorrect year number: $Year"
     return
   }
   # arrays of days in each month
@@ -28,7 +28,7 @@ function Test-LeapYear {
     [int]$Year
   )
   if ($Year -lt 1) {
-    Write-Error "Неверный номер года: $Year"
+    Write-Error "Incorrect year number: $Year"
     return
   }
   # Algoritm to chech leap year
@@ -52,16 +52,16 @@ function Show-Calendar {
     [int]$Year = (Get-Date).Year
   )
   if ($Month -lt 1 -or $Month -gt 12) {
-    Write-Error "Неверный номер месяца: $Month"
+    Write-Error "Incorrect month number: $Month"
     return
   }
    if ($Year -lt 1) {
-    Write-Error "Неверный номер года: $Year"
+    Write-Error "Incorrect year number: $Year"
     return
    }
 
    # array with month names
-   $months = @("Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь")
+   $months = @("January","February","March","April","May","June","July","August","September","October","November","December")
 
    # put year state (leap or not) leap variable
    if (Test-LeapYear -Year $Year) {
@@ -81,7 +81,7 @@ function Show-Calendar {
    Write-Host ("`n" + $months[$Month-1] + " " + $Year).PadLeft(20).PadRight(20)
 
    # Short names of days
-   Write-Host "Вс Пн Вт Ср Чт Пт Сб"
+   Write-Host "Su Mo Tu We Th Fr Sa"
 
    # Выводим пустые ячейки до первого числа месяца
    for ($i = 0; $i -lt $firstDay; $i++) {
