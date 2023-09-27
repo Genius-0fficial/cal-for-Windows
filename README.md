@@ -7,5 +7,5 @@ Bringing to Windows PowerShell common unix command.
 ## Installation
 <b> To install script download script file and put it into your user folder </b> <code> C:\Users\YourUsername\ </code> <b> and that's it, script ready to use. </b>
 
-## Castomization
-<b> You can privide any castomization you want, for example translate script output to your language. </b>
+## Customization
+<b> You can provide any customization you want, for example translate script output to your language. </b>
